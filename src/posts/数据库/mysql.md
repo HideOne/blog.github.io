@@ -3,6 +3,7 @@ title: mysql
 date: 2023-11-25 12:20:41
 category:
   - 数据库
+breadcrumb: true
 ---
 
 ## 安装

@@ -9,14 +9,14 @@ heroFullScreen: true
 tagline: 你可以在这里放置你的口号与标语
 projects:
   - icon: link
-    name: 网络安全
-    desc: 项目详细描述
-    link: https://你的项目链接
+    name: 数据库
+    desc: 关于数据库的学习资料
+    link: posts/数据库/数据库
 
   - icon: link
-    name: 链接名称
-    desc: 链接详细描述
-    link: https://链接地址
+    name: 虚拟机安装
+    desc: 关于虚拟机安装教程
+    link: posts/虚拟机安装/centos7安装
 
 footer: 自定义你的页脚文字
 ---
