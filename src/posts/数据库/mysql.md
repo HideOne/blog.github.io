@@ -7,13 +7,13 @@ category:
 
 ## 安装
 
-#### 下载地址
+### 下载地址
 
 ```
 https://dev.mysql.com/downloads/repo/yum/
 ```
 
-#### 安装步骤
+### 安装步骤
 
 安装前，我们可以检测系统是否自带安装 MySQL:
 
@@ -28,7 +28,7 @@ rpm -e mysql 　　// 普通删除模式
 rpm -e --nodeps mysql 　　// 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除
 ```
 
-#### linux 内安装
+### linux 内安装
 
 ```
 wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
@@ -37,98 +37,98 @@ yum update
 yum install mysql-server
 ```
 
-#### 权限设置：
+### 权限设置：
 
 ```
 chown -R mysql:mysql /var/lib/mysql/
 ```
 
-#### 初始化 MySQL：
+### 初始化 MySQL：
 
 ```
 mysqld --initialize
 ```
 
-#### 启动 MySQL：
+### 启动 MySQL：
 
 ```
 systemctl start mysqld
 ```
 
-#### 查看 MySQL 运行状态：
+### 查看 MySQL 运行状态：
 
 ```
 systemctl status mysqld
 ```
 
-#### 初始密码设置
+### 初始密码设置
 
 **Mysql 安装成功后，默认的 root 用户密码为空，你可以使用以下命令来创建 root 用户的密码：**
 
 ```
-[root@host]# mysqladmin -u root password "new_password";
+[root@host]## mysqladmin -u root password "new_password";
 ```
 
 **现在你可以通过以下命令来连接到 Mysql 服务器：**
 
 ```
-[root@host]# mysql -u root -p
+[root@host]## mysql -u root -p
 Enter password:**\*\*\***
 ```
 
 ## mysql 管理
 
-#### 检查 mysql 启动
+### 检查 mysql 启动
 
 ```
 ps -ef | grep mysqld
 ```
 
-#### 关闭 mysql 服务
+### 关闭 mysql 服务
 
 ```
-root@host# cd /usr/bin
+root@host## cd /usr/bin
 ./mysqladmin -u root -p shutdown
 Enter password: ******
 ```
 
-#### mysql 命令
+### mysql 命令
 
-##### 列出 MySQL 数据库管理系统的数据库列表。
+#### 列出 MySQL 数据库管理系统的数据库列表。
 
 ```
 SHOW DATABASES:
 列出 MySQL 数据库管理系统的数据库列表
 ```
 
-##### 显示指定数据库的所有表
+#### 显示指定数据库的所有表
 
 ```
 SHOW TABLES:
 显示指定数据库的所有表，使用该命令前需要使用 use 命令来选择要操作的数据库。
 ```
 
-##### 显示数据表的属性
+#### 显示数据表的属性
 
 ```
 SHOW COLUMNS FROM 数据表:
 显示数据表的属性，属性类型，主键信息 ，是否为 NULL，默认值等其他信息。
 ```
 
-##### 创建数据库
+#### 创建数据库
 
 ```
 CREATE DATABASE 数据库名:
 创建数据库
 ```
 
-##### 删除数据库
+#### 删除数据库
 
 ```
 drop database <数据库名>;
 ```
 
-##### 数值类型
+#### 数值类型
 
 | 类型           | 大小                                          | 范围（有符号）                                                                                                                      | 范围（无符号）                                                    | 用途            |
 | -------------- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------- |
@@ -141,7 +141,7 @@ drop database <数据库名>;
 | DOUBLE         | 8 Bytes                                       | (-1.797 693 134 862 315 7 E+308，-2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308) | 0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308) | 双精度 浮点数值 |
 | DECIMAL        | 对 DECIMAL(M,D) ，如果 M>D，为 M+2 否则为 D+2 | 依赖于 M 和 D 的值                                                                                                                  | 依赖于 M 和 D 的值                                                | 小数            |
 
-##### 字符串类型
+#### 字符串类型
 
 | 类型       | 大小                  | 用途                            |
 | ---------- | --------------------- | ------------------------------- |
@@ -156,7 +156,7 @@ drop database <数据库名>;
 | LONGBLOB   | 0-4 294 967 295 bytes | 二进制形式的极大文本数据        |
 | LONGTEXT   | 0-4 294 967 295 bytes | 极大文本数据                    |
 
-##### 创建数据表
+#### 创建数据表
 
 ```
 CREATE TABLE table_name (column_name column_type);
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `runoob_tbl`(
 - PRIMARY KEY 关键字用于定义列为主键。 您可以使用多列来定义主键，列间以逗号分隔。
 - ENGINE 设置存储引擎，CHARSET 设置编码。
 
-##### 插入数据
+#### 插入数据
 
 ```
 INSERT INTO table_name ( field1, field2,...fieldN )
@@ -187,7 +187,7 @@ INSERT INTO table_name ( field1, field2,...fieldN )
 ```
 
 ```
-root@host# mysql -u root -p password;
+root@host## mysql -u root -p password;
 Enter password:*******
 mysql> use RUNOOB;
 Database changed
@@ -208,7 +208,7 @@ mysql> INSERT INTO runoob_tbl
 Query OK, 1 rows affected (0.00 sec)
 ```
 
-##### 查询数据
+#### 查询数据
 
 ```
 SELECT column_name,column_name
@@ -232,7 +232,7 @@ SELECT * from runoob_tbl WHERE runoob_author='菜鸟教程';
 - 你可以使用 LIMIT 属性来设定返回的记录数。
 - 你可以通过 OFFSET 指定 SELECT 语句开始查询的数据偏移量。默认情况下偏移量为 0。
 
-##### UPDATE 更新
+#### UPDATE 更新
 
 ```
 UPDATE table_name SET field1=new-value1, field2=new-value2
@@ -251,7 +251,7 @@ mysql> UPDATE runoob_tbl SET runoob_title='学习 C++' WHERE runoob_id=3;
 mysql> SELECT * from runoob_tbl  WHERE runoob_author LIKE '%COM';
 ```
 
-##### UNION 操作符
+#### UNION 操作符
 
 - UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据
 
@@ -280,17 +280,17 @@ SELECT country FROM apps
 ORDER BY country;
 ```
 
-##### 排序 ORDER BY
+#### 排序 ORDER BY
 
 `SELECT * from runoob_tbl ORDER BY submission_date ASC`
 
-##### 连接
+#### 连接
 
 - INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录。
 - LEFT JOIN（左连接）：获取左表所有记录，即使右表没有对应匹配的记录。
 - RIGHT JOIN（右连接）： 与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录。
 
-##### 事务
+#### 事务
 
 - 原子性处理一系列操作
 
@@ -309,10 +309,10 @@ ELSE
     ROLLBACK; -- 回滚事务
 ```
 
-##### 索引
+#### 索引
 
 - 大大提高数据库检索速度
 
-##### 临时表
+#### 临时表
 
 - 临时表只在当前连接可见，当关闭连接时，Mysql 会自动删除表并释放所有空间。
