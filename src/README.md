@@ -2,47 +2,27 @@
 home: true
 layout: BlogHome
 icon: home
-title: Blog Home
+title: 博客主页
 heroImage: /logo.svg
-heroText: The name of your blog
-tagline: You can put your slogan here
+heroText: 你博客的名称
 heroFullScreen: true
+tagline: 你可以在这里放置你的口号与标语
 projects:
-  - icon: project
-    name: project name
-    desc: project detailed description
-    link: https://your.project.link
+  - icon: link
+    name: 网络安全
+    desc: 项目详细描述
+    link: https://你的项目链接
 
   - icon: link
-    name: link name
-    desc: link detailed description
-    link: https://link.address
+    name: 链接名称
+    desc: 链接详细描述
+    link: https://链接地址
 
-  - icon: book
-    name: book name
-    desc: Detailed description of the book
-    link: https://link.to.your.book
-
-  - icon: article
-    name: article name
-    desc: Detailed description of the article
-    link: https://link.to.your.article
-
-  - icon: friend
-    name: friend name
-    desc: Detailed description of friend
-    link: https://link.to.your.friend
-
-  - icon: /logo.svg
-    name: custom item
-    desc: Detailed description of this custom item
-    link: https://link.to.your.friend
-
-footer: customize your footer text
+footer: 自定义你的页脚文字
 ---
 
-This is a blog home page demo.
+这是一个博客主页的案例。
 
-To use this layout, you should set both `layout: BlogHome` and `home: true` in the page front matter.
+要使用此布局，你应该在页面前端设置 `layout: BlogHome` 和 `home: true`。
 
-For related configuration docs, please see [blog homepage](https://theme-hope.vuejs.press/guide/blog/home/).
+相关配置文档请见 [博客主页](https://theme-hope.vuejs.press/zh/guide/blog/home/)。
