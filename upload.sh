@@ -1,3 +1,4 @@
+pnpm docs:build
 mv ./src/.vuepress/dist ./docs -f
 cp ./CNAME ./docs/CNAME
 git add *
