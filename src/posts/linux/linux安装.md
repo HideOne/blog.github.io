@@ -1,5 +1,5 @@
 ---
-title: centos7安装
+title: linux安装
 date: 2023-11-25 12:36:41
 category:
   - linux
