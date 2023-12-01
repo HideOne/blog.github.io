@@ -1,5 +1,7 @@
 ---
 title: Shell
+date: 2023-11-30 20:34:00
+star: 9
 ---
 
 ## 什么是 Shell
@@ -110,7 +112,7 @@ then
 fi
 ```
 
-## shell 函数
+## shell 命令
 
 ### printf
 
@@ -204,4 +206,80 @@ then
 else
    echo "没有符合的条件"
 fi
+```
+
+### 函数
+
+```sh
+[ function ] funname [()]
+
+{
+
+    action;
+
+    [return int;]
+
+}
+
+funWithReturn(){
+    echo "这个函数会对输入的两个数字进行相加运算..."
+    echo "输入第一个数字: "
+    read aNum
+    echo "输入第二个数字: "
+    read anotherNum
+    echo "两个数字分别为 $aNum 和 $anotherNum !"
+    return $(($aNum+$anotherNum))
+}
+funWithReturn
+echo "输入的两个数字之和为 $? !"
+```
+
+### Shell 输入/输出重定向
+
+| 命令            | 说明                                               |
+| --------------- | -------------------------------------------------- |
+| command > file  | 将输出重定向到 file。                              |
+| command < file  | 将输入重定向到 file。                              |
+| command >> file | 将输出以追加的方式重定向到 file。                  |
+| n > file        | 将文件描述符为 n 的文件重定向到 file。             |
+| n >> file       | 将文件描述符为 n 的文件以追加的方式重定向到 file。 |
+| n >& m          | 将输出文件 m 和 n 合并。                           |
+| n <& m          | 将输入文件 m 和 n 合并。                           |
+| << tag          | 将开始标记 tag 和结束标记 tag 之间的内容作为输入。 |
+
+#### /dev/null 文件
+
+- 无底洞
+
+```sh
+$ command > /dev/null
+```
+
+### 引用文件
+
+```sh
+test1.sh 代码如下：
+
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+url="http://www.runoob.com"
+
+
+
+
+test2.sh 代码如下：
+
+#!/bin/bash
+# author:菜鸟教程
+# url:www.runoob.com
+
+#使用 . 号来引用test1.sh 文件
+. ./test1.sh
+
+# 或者使用以下包含文件代码
+# source ./test1.sh
+
+echo "菜鸟教程官网地址：$url"
 ```
