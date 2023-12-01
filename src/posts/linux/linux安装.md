@@ -2,13 +2,17 @@
 title: centos7安装
 date: 2023-11-25 12:36:41
 category:
-  - 虚拟机安装
+  - linux
 ---
 
 ## 下载
 
 ```
+# centOs
 https://mirrors.aliyun.com/centos/7/isos/x86_64/
+
+# kali
+https://cdimage.kali.org/kali-weekly/
 ```
 
 [下载地址]("https://mirrors.aliyun.com/centos/7/isos/x86_64/")
