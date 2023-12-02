@@ -1,4 +1,4 @@
-import{_ as i}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as e,c as n,d as t}from"./app-m6Ybaokx.js";const s={},l=t(`<h2 id="下载" tabindex="-1"><a class="header-anchor" href="#下载" aria-hidden="true">#</a> 下载</h2><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code># centOs
+import{_ as i}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as e,c as n,d as t}from"./app-UMIEiwJv.js";const s={},l=t(`<h2 id="下载" tabindex="-1"><a class="header-anchor" href="#下载" aria-hidden="true">#</a> 下载</h2><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code># centOs
 https://mirrors.aliyun.com/centos/7/isos/x86_64/
 
 # kali
