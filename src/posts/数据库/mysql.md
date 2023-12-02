@@ -317,3 +317,114 @@ ELSE
 ### 临时表
 
 - 临时表只在当前连接可见，当关闭连接时，Mysql 会自动删除表并释放所有空间。
+
+## php
+
+### 连接
+
+```php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+// 创建连接
+$conn = new mysqli($servername, $username, $password);
+
+// 检测连接
+if ($conn->connect_error) {
+    die("连接失败: " . $conn->connect_error);
+}
+echo "连接成功";
+
+# 关闭连接
+mysqli_close($conn);
+# 或
+$conn->close();
+```
+
+### 插入数据
+
+```php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// 创建连接
+$conn = new mysqli($servername, $username, $password, $dbname);
+// 检测连接
+if ($conn->connect_error) {
+    die("连接失败: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "新记录插入成功";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+```
+
+#### 插入多条数据
+
+````php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// 创建链接
+$conn = new mysqli($servername, $username, $password, $dbname);
+// 检查链接
+if ($conn->connect_error) {
+    die("连接失败: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('John', 'Doe', 'john@example.com');";
+$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('Mary', 'Moe', 'mary@example.com');";
+$sql .= "INSERT INTO MyGuests (firstname, lastname, email)
+VALUES ('Julie', 'Dooley', 'julie@example.com')";
+
+if ($conn->multi_query($sql) === TRUE) {
+    echo "新记录插入成功";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();```
+````
+
+### 读取数据
+
+```php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "myDB";
+
+// 创建连接
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("连接失败: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 结果";
+}
+$conn->close();
+```
