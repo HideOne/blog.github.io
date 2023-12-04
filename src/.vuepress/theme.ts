@@ -26,6 +26,8 @@ export default hopeTheme({
 
   // sidebar
   sidebar,
+  headerDepth: 2,
+  sidebarIcon: true,
 
   footer: "默认页脚",
 
