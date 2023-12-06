@@ -280,11 +280,23 @@ _hsla(hue, saturation, lightness)_
 
 
 ## 背景设置
-- background-color
-- background-image
-- background-repeat
-- background-attachment
-- background-position
+- background-color 颜色
+- background-image 背景图
+- background-repeat 背景尺寸超出图片尺寸的重复填补
+- background-attachment 附着还是固定
+- background-position  位置
+
+|属性 | 描述|
+|-|-|
+|background | 在一条声明中设置所有背景属性的简写属性。|
+|background-attachment | 设置背景图像是固定的还是与页面的其余部分一起滚动。|
+|background-clip | 规定背景的绘制区域。|
+|background-color | 设置元素的背景色。|
+|background-image | 设置元素的背景图像。|
+|background-origin | 规定在何处放置背景图像。|
+|background-position | 设置背景图像的开始位置。|
+|background-repeat | 设置背景图像是否及如何重复。|
+|background-size | 规定背景图像的尺寸。|
 
 ### background-color
 ```css
@@ -316,4 +328,146 @@ body {
   /* 水平方向重复 */
   background-repeat: repeat-x;
 }
+```
+
+### background-position
+-  指定图像的位置
+```css
+body {
+  background-image: url("tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+```
+
+
+### background-attachment
+背景附着
+- 背景图像是随页面滚动而滚动还是固定的
+```css
+/* 固定 */
+background-attachment: fixed;
+/* 滚动 */
+background-attachment: scroll;
+```
+
+## 边框 border-style
+可以设置1-4个值
+- dotted - 定义点线边框
+- dashed - 定义虚线边框
+- solid - 定义实线边框
+- double - 定义双边框
+- groove - 定义 3D 坡口边框。效果取决于 border-color 值
+- ridge - 定义 3D 脊线边框。效果取决于 border-color 值
+- inset - 定义 3D inset 边框。效果取决于 border-color 值
+- outset - 定义 3D outset 边框。效果取决于 border-color 值
+- none - 定义无边框
+- hidden - 定义隐藏边框
+
+|属性 | 描述|
+|-|-|
+|border | 简写属性，在一条声明中设置所有边框属性。|
+|border-color | 简写属性，设置四条边框的颜色。|
+|border-radius | 简写属性，可设置圆角的所有四个 border-*-radius 属性。|
+|border-style | 简写属性，设置四条边框的样式。|
+|border-width | 简写属性，设置四条边框的宽度。|
+|border-bottom | 简写属性，在一条声明中设置所有下边框属性。|
+|border-bottom-color | 设置下边框的颜色。|
+|border-bottom-style | 设置下边框的样式。|
+|border-bottom-width | 设置下边框的宽度。|
+|border-left | 简写属性，在一条声明中设置所有左边框属性。|
+|border-left-color | 设置左边框的颜色。|
+|border-left-style | 设置左边框的样式。|
+|border-left-width | 设置左边框的宽度。|
+|border-right | 简写属性，在一条声明中设置所有右边框属性。|
+|border-right-color | 设置右边框的颜色。|
+|border-right-style | 设置右边框的样式。|
+|border-right-width | 设置右边框的宽度。|
+|border-top | 简写属性，在一条声明中设置所有上边框属性。|
+|border-top-color | 设置上边框的颜色。|
+|border-top-style | 设置上边框的样式。|
+|border-top-width | 设置上边框的宽度。|
+
+
+### 边框宽度
+```css
+p.one {
+  border-style: solid;
+  border-width: 5px;
+}
+
+p.two {
+  border-style: solid;
+  border-width: medium;
+}
+
+p.three {
+  border-style: dotted;
+  border-width: 2px;
+} 
+
+p.four {
+  border-style: dotted;
+  border-width: thick;
+}
+```
+
+### 边框颜色
+```css
+border-color: red;
+border-color: red green blue yellow; /* 上红、右绿、下蓝、左黄 */
+```
+
+### 边框圆角
+```css
+ border-radius: 5px;
+```
+
+## 边距
+### 外边距 margin
+- margin-top
+- margin-right
+- margin-bottom
+- margin-left
+
+可设置的值 可以为负
+- auto - 浏览器来计算外边距
+- length - 以 px、pt、cm 等单位指定外边距
+- % - 指定以包含元素宽度的百分比计的外边距
+- inherit - 指定应从父元素继承外边距
+```css
+margin-left: 80px;
+/* 上外边距是 25px 右外边距是 50px 下外边距是 75px 左外边距是 100px */
+margin: 25px 50px 75px 100px;
+```
+
+### 内边距 padding
+
+可设置值 不可以为负
+- length - 以 px、pt、cm 等单位指定内边距
+- % - 指定以包含元素宽度的百分比计的内边距
+- inherit - 指定应从父元素继承内边距
+
+用法与margin类似
+
+
+## 高度和宽度 height 和 width
+|属性 | 描述|
+|-|-|
+|height | 设置元素的高度。|
+|max-height | 设置元素的最大高度。|
+|max-width | 设置元素的最大宽度。|
+|min-height | 设置元素的最小高度。|
+|min-width | 设置元素的最小宽度。|
+|width | 设置元素的宽度。|
+
+可设置值
+- auto - 默认。浏览器计算高度和宽度。
+- length - 以 px、cm 等定义高度/宽度。
+- % - 以包含块的百分比定义高度/宽度。
+- initial - 将高度/宽度设置为默认值。
+- inherit - 从其父值继承高度/宽度。
+```css
+  height: 200px;
+  width: 50%;
 ```

@@ -1,13 +1,22 @@
 // import * as fs from "fs";
 const fs = require("fs");
-var text = fs.readFileSync("./md.text").toString() as String;
+var text = "";
+
+var path = "./md.text";
+try {
+  text = fs.readFileSync(path).toString() as string;
+} catch (e) {
+  path = "./tool/md.text";
+  text = fs.readFileSync(path).toString() as string;
+}
+
 // 删除空行
 text = text.replace(/^\s*\n/g, "");
 text = text.replace(/\</gi, "< ");
 text = text.replace(/\>/gi, " >");
 text = text.replace(/\|/gi, " ");
 text = text.replace(/	/gi, " | ");
-var lines = text.split("\r\n");
+var lines = text.split("\n");
 console.log(lines.length);
 var newText = "";
 const count = lines[0].split("|")?.length + 1;
@@ -22,4 +31,4 @@ lines.forEach((line: string, idx: number) => {
     newText += tmpline + "\n";
   }
 });
-fs.writeFileSync("./md.text", newText);
+fs.writeFileSync(path, newText);
