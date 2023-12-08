@@ -1,16 +1,8 @@
 |属性 | 描述|
 |-|-|
-|color | 设置文本颜色。|
-|direction | 指定文本的方向 / 书写方向。|
-|letter-spacing | 设置字符间距。|
-|line-height | 设置行高。|
-|text-align | 指定文本的水平对齐方式。|
-|text-decoration | 指定添加到文本的装饰效果。|
-|text-indent | 指定文本块中首行的缩进。|
-|text-shadow | 指定添加到文本的阴影效果。|
-|text-transform | 控制文本的大小写。|
-|text-overflow | 指定应如何向用户示意未显示的溢出内容。|
-|unicode-bidi | 与 direction 属性一起使用，设置或返回是否应重写文本来支持同一文档中的多种语言。|
-|vertical-align | 指定文本的垂直对齐方式。|
-|white-space | 指定如何处理元素内的空白。|
-|word-spacing | 设置单词间距。|
+|border | 简写属性。在一条声明中设置所有边框属性。|
+|border-collapse | 规定是否应折叠表格边框。|
+|border-spacing | 规定相邻单元格之间的边框的距离。|
+|caption-side | 规定表格标题的位置。|
+|empty-cells | 规定是否在表格中的空白单元格上显示边框和背景。|
+|table-layout | 设置用于表格的布局算法。|
