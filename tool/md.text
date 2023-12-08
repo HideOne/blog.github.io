@@ -1,8 +1,16 @@
 |属性 | 描述|
 |-|-|
-|height | 设置元素的高度。|
-|max-height | 设置元素的最大高度。|
-|max-width | 设置元素的最大宽度。|
-|min-height | 设置元素的最小高度。|
-|min-width | 设置元素的最小宽度。|
-|width | 设置元素的宽度。|
+|color | 设置文本颜色。|
+|direction | 指定文本的方向 / 书写方向。|
+|letter-spacing | 设置字符间距。|
+|line-height | 设置行高。|
+|text-align | 指定文本的水平对齐方式。|
+|text-decoration | 指定添加到文本的装饰效果。|
+|text-indent | 指定文本块中首行的缩进。|
+|text-shadow | 指定添加到文本的阴影效果。|
+|text-transform | 控制文本的大小写。|
+|text-overflow | 指定应如何向用户示意未显示的溢出内容。|
+|unicode-bidi | 与 direction 属性一起使用，设置或返回是否应重写文本来支持同一文档中的多种语言。|
+|vertical-align | 指定文本的垂直对齐方式。|
+|white-space | 指定如何处理元素内的空白。|
+|word-spacing | 设置单词间距。|

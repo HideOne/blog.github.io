@@ -471,3 +471,192 @@ margin: 25px 50px 75px 100px;
   height: 200px;
   width: 50%;
 ```
+
+## 轮廓
+
+- outline-style
+- outline-color
+- outline-width
+- outline-offset
+- outline
+
+### outline-style
+outline-style属性:
+- dotted - 定义点状的轮廓。
+- dashed - 定义虚线的轮廓。
+- solid - 定义实线的轮廓。
+- double - 定义双线的轮廓。
+- groove - 定义 3D 凹槽轮廓。
+- ridge - 定义 3D 凸槽轮廓。
+- inset - 定义 3D 凹边轮廓。
+- outset - 定义 3D 凸边轮廓。
+- none - 定义无轮廓。
+- hidden - 定义隐藏的轮廓。
+
+```css
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+```
+结果: 
+![Alt text](image-4.png)
+
+### outline-width
+可设置值:
+- thin（通常为 1px）
+- medium（通常为 3px）
+- thick （通常为 5px）
+- 特定尺寸（以 px、pt、cm、em 计）
+
+### outline-color
+可设置值:
+- name - 指定颜色名，比如 "red"
+- HEX - 指定十六进制值，比如 "#ff0000"
+- RGB - 指定 RGB 值，比如 "rgb(255,0,0)"
+- HSL - 指定 HSL 值，比如 "hsl(0, 100%, 50%)"
+- invert - 执行颜色反转（确保轮廓可见，无论是什么颜色背景）
+
+### 简写
+```css
+p.ex1 {outline: dashed;}
+p.ex2 {outline: dotted red;}
+p.ex3 {outline: 5px solid yellow;}
+p.ex4 {outline: thick ridge pink;}
+```
+
+## 文本
+
+属性:
+|属性 | 描述|
+|-|:-|
+|color | 设置文本颜色。|
+|direction | 指定文本的方向 / 书写方向。|
+|letter-spacing | 设置字符间距。|
+|line-height | 设置行高。|
+|text-align | 指定文本的水平对齐方式。|
+|text-decoration | 指定添加到文本的装饰效果。|
+|text-indent | 指定文本块中首行的缩进。|
+|text-shadow | 指定添加到文本的阴影效果。|
+|text-transform | 控制文本的大小写。|
+|text-overflow | 指定应如何向用户示意未显示的溢出内容。|
+|unicode-bidi | 与 direction 属性一起使用，设置或返回是否应重写文本来支持同一文档中的多种语言。|
+|vertical-align | 指定文本的垂直对齐方式。|
+|white-space | 指定如何处理元素内的空白。|
+|word-spacing | 设置单词间距。|
+
+### 颜色
+```css
+color: blue
+```
+
+### 对齐
+#### text-align 水平对齐
+```css
+ text-align: center;
+ text-align: left;
+ text-align: right;
+ /* 使每一行宽度相等 */
+ text-align: justify;
+```
+
+#### 垂直对齐
+```css
+vertical-align: top;
+vertical-align: middle;
+vertical-align: bottom;
+```
+
+
+### 文本方向
+- direction 和 unicode-bidi
+```css
+p {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+```
+结果:
+![Alt text](image-5.png)
+
+
+### 文字间距
+```css
+/* 段落首行缩进 */
+text-indent: 50px
+
+/* 字符间距 */
+letter-spacing: 3px;
+letter-spacing: -3px;
+
+/* 单词间距 */
+word-spacing: 10px;
+word-spacing: -10px;
+
+/* 行间距 */
+line-height: 0.8;
+```
+
+### 字体
+```css
+font-family: "Times New Roman", Times, serif;
+```
+
+
+#### 字体样式
+- normal - 文字正常显示
+- italic - 文本以斜体显示
+
+
+#### 文字大小 font-size
+```css
+font-size: 16px;
+```
+
+### 圆角 border-radius
+![Alt text](image-3.png)
+```css
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+```
+
+
+![Alt text](image-2.png)
+```css
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+```
+
+![Alt text](image-1.png)
+```css
+#rcorners3 {
+  border-radius: 25px;
+  background: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+```
+
+```css
+/* 指定每个圆角 */
+border-radius: 15px 50px 30px 5px;
+/* 椭圆圆角 */
+border-radius: 50px / 15px;
+```
