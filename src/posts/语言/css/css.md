@@ -853,4 +853,30 @@ div {
 可以向包含元素添加 overflow: auto;，解决此问题：
 [浮动实例](https://www.w3school.com.cn/css/css_float_examples.asp)
 
+## 组合选择
+- 后代选择器 (空格)
+- 子选择器 (>)
+- 相邻兄弟选择器 (+)
+- 通用兄弟选择器 (~)
 
+```css
+/* 选择 <div> 元素内的所有 <p> 元素 */
+div p {
+  background-color: yellow;
+}
+/* 选择属于 <div> 元素子元素的所有 <p> 元素 */
+div > p {
+  background-color: yellow;
+}
+/* 选择紧随 <div> 元素之后的所有 <p> 元素 */
+div + p {
+  background-color: yellow;
+}
+/* 选择属于 <div> 元素的同级元素的所有 <p> 元素 */
+div ~ p {
+  background-color: yellow;
+}
+```
+
+## 透明度
+opacity 0.0-1.0
