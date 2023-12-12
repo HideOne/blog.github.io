@@ -16,7 +16,7 @@ text = text.replace(/\</gi, "< ");
 text = text.replace(/\>/gi, " >");
 text = text.replace(/\|/gi, " ");
 text = text.replace(/	/gi, " | ");
-var lines = text.split("\n");
+var lines = text.split("\r\n");
 console.log(lines.length);
 var newText = "";
 const count = lines[0].split("|")?.length + 1;

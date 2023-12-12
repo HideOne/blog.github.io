@@ -603,22 +603,22 @@ p.ex4 {
 ## 文本
 
 属性:
-|属性 | 描述|
-|-|:-|
-|color | 设置文本颜色。|
-|direction | 指定文本的方向 / 书写方向。|
-|letter-spacing | 设置字符间距。|
-|line-height | 设置行高。|
-|text-align | 指定文本的水平对齐方式。|
-|text-decoration | 指定添加到文本的装饰效果。|
-|text-indent | 指定文本块中首行的缩进。|
-|text-shadow | 指定添加到文本的阴影效果。|
-|text-transform | 控制文本的大小写。|
-|text-overflow | 指定应如何向用户示意未显示的溢出内容。|
-|unicode-bidi | 与 direction 属性一起使用，设置或返回是否应重写文本来支持同一文档中的多种语言。|
-|vertical-align | 指定文本的垂直对齐方式。|
-|white-space | 指定如何处理元素内的空白。|
-|word-spacing | 设置单词间距。|
+| 属性            | 描述                                                                            |
+| --------------- | :------------------------------------------------------------------------------ |
+| color           | 设置文本颜色。                                                                  |
+| direction       | 指定文本的方向 / 书写方向。                                                     |
+| letter-spacing  | 设置字符间距。                                                                  |
+| line-height     | 设置行高。                                                                      |
+| text-align      | 指定文本的水平对齐方式。                                                        |
+| text-decoration | 指定添加到文本的装饰效果。                                                      |
+| text-indent     | 指定文本块中首行的缩进。                                                        |
+| text-shadow     | 指定添加到文本的阴影效果。                                                      |
+| text-transform  | 控制文本的大小写。                                                              |
+| text-overflow   | 指定应如何向用户示意未显示的溢出内容。                                          |
+| unicode-bidi    | 与 direction 属性一起使用，设置或返回是否应重写文本来支持同一文档中的多种语言。 |
+| vertical-align  | 指定文本的垂直对齐方式。                                                        |
+| white-space     | 指定如何处理元素内的空白。                                                      |
+| word-spacing    | 设置单词间距。                                                                  |
 
 ### 颜色
 
@@ -766,8 +766,17 @@ display: inline;
 display: block;
 ```
 
-## position
-
+## 定位
+|属性 | 描述|
+|-|-|
+|bottom | 设置定位框的底部外边距边缘。|
+|clip | 剪裁绝对定位的元素。|
+|left | 设置定位框的左侧外边距边缘。|
+|position | 规定元素的定位类型。|
+|right | 设置定位框的右侧外边距边缘。|
+|top | 设置定位框的顶部外边距边缘。|
+|z-index | 设置元素的堆叠顺序。|
+### posisiton
 - 元素定位方式
   可设置属性:
 - static
@@ -776,12 +785,12 @@ display: block;
 - absolute
 - sticky
 
-### static
+#### static
 
 - 默认定位方式
 - 不受 top、bottom、left 和 right 属性的影响
 
-### position: relative
+#### position: relative
 
 - 相对定位
 
@@ -792,4 +801,56 @@ div.relative {
   border: 3px solid #73ad21;
 }
 ```
+
+#### position: fixed
+- 相对于视口定位的 页面滚动 位置也不变
+- top、right、bottom 和 left 属性用于定位
+
+#### position: absolute;
+- 相对于最近的定位父元素进行定位
+- 如果没有父元素 将使用body
+
+#### position: sticky粘性定位
+[演示地址](https://www.w3school.com.cn/tiy/t.asp?f=css_position_sticky)
+
+## 溢出 overflow
+- 元素(比如文本)内容太大无法放入指定区域时的显示方式:裁剪 滚动
+
+可设置以下值:
+- visible - 默认。溢出不被剪裁。内容超出范围显示
+- hidden - 溢出被剪裁，其余内容将不可见
+- scroll - 溢出被剪裁，同时可滚动查看其余内容
+- auto - 与 scroll 类似，但仅在必要时添加滚动条
+
+## 浮动和清除
+### float 
+- 规定元素浮动方式
+
+可设置值:
+- left - 元素浮动到其容器的左侧
+- right - 元素浮动在其容器的右侧
+- none - 元素不会浮动（将显示在文本中刚出现的位置）。默 认值。
+- inherit - 元素继承其父级的 float 值
+
+
+### clear 
+- clear 属性指定不能在元素哪一边浮动
+
+可设置的值:
+- none - 允许两侧都有浮动元素。默认值
+- left - 左侧不允许浮动元素
+- right- 右侧不允许浮动元素
+- both - 左侧或右侧均不允许浮动元素
+- inherit - 元素继承其父级的 clear 值
+
+```css
+/* 表示在（div 的）左侧不允许出现浮动元素： */
+div {
+  clear: left;
+}
+```
+如果一个元素比包含它的元素高，并且它是浮动的，将“溢出”到其容器之外：
+可以向包含元素添加 overflow: auto;，解决此问题：
+[浮动实例](https://www.w3school.com.cn/css/css_float_examples.asp)
+
 
