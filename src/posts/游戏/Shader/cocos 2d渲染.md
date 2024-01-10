@@ -26,3 +26,13 @@ headerDepth: 2
 ### 无法合批组件  
 - 内置组件 Mask、Graphics 和 UIMeshRenderer 组件由于材质不同和数据组织方式的差异，无法与其他组件合批；
 - TiledMap、Spine 和 DragonBones 这三个中间件组件则是遵循自己的内部合批机制。  
+
+## 渲染纹理
+渲染纹理是一张在 GPU 上的纹理。通常我们会把它设置到相机的 目标纹理 上，使相机照射的内容通过离屏的 frambuffer 绘制到该纹理上。一般可用于制作汽车后视镜，动态阴影等功能。
+
+## 材质属性设置
+
+设置uniform变量
+```ts
+mat.setProperty("uniform name", uniformValue)
+```
