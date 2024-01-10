@@ -82,3 +82,75 @@ headerDepth: 2
 |out | 用在函数的参数中，表示该参数是输出参数，值是会改变的。|
 |inout | 用在函数的参数，表示这个参数即是输入参数也是输出参数。|
 
+## 内置函数
+
+### 三角函数
+|语法 | 说明|
+|-|-|
+|genType radians (genType degrees) | 角度转弧度（degrees to radians）|
+|genType degrees (genType radians) | 弧度转角度（radians to degrees）|
+|genType sin (genType angle) | 三角函数-正弦sine|
+|genType cos (genType angle) | 三角函数-余弦cosine|
+|genType tan (genType angle) | 三角函数-正切tangent|
+|genType asin (genType x) | 反三角函数-反正弦arc sine|
+|genType atan (genType y, genType x) | 反三角函数-反余弦arc cosine|
+|genType atan (genType y_over_x) | 反三角函数-反正切arc tangent|
+
+### 指数函数
+|语法 | 说明|
+|-|-|
+|genType pow (genType x, genType y) | x的y次方，\(x^y\)。如果x< 0，则结果是undefined；如果x=0并且y< =0，则结果是undefined|
+|genType exp (genType x) | x的自然指数，\(e^x\)|
+|genType log (genType x) | x的自然对数，\(\log_ex\)，即\(\ln{x}\)x< =0时结果是undefined|
+|genType exp2 (genType x) | 2的x次方，\(2^x\)|
+|genType log2 (genType x) | 以2为底，x的自然对数，\(log_2x\)，x< =0时结果是undefined|
+|genType sqrt (genType x) | 对x进行开根号，\(\sqrt{x}\)，x< 0时结果是undefined|
+|genType inversesqrt (genType x) | sqrt的倒数，\(\frac{1}{\sqrt x}\)，x< =0时结果是undefined|
+
+
+### 几何函数
+|语法 | 说明|
+|-|-|
+|genType length (genType x) | 计算向量的长度， \(\sqrt{x1^2+x2^2+...}\)|
+|genType distance (genType p0, genType p1) | p0和p1之间的距离，即length(p0-p1)|
+|genType dot (genType x, genType y) | 向量x与向量y的点积|
+|genType cross (vec3 x, vec3 y) | 向量x与向量y的叉积|
+|genType normalize (genType x) | 返回向量x对应的单位向量，即方向相同，长度为1|
+|genType faceforward(genType N, genType I, genType Nref) | 如果dot(Nref, I) <  0，则返回N，否则返回-N|
+|genType reflect (genType I, genType N) | I是入射光的方向，N是反射平面的法线，返回值是反射光的方向。I – 2 * dot(N, I) * N。N必须是单位向量。|
+|genType refract(genType I, genType N, float eta) | I是入射光的方向，N是反射平面的法线，折射率是eta，返回值是折射后的光线的向量。I和N必须是单位向量。|
+
+
+### 矩阵函数
+|语法 | 说明|
+|-|-|
+|mat matrixCompMult (mat x, mat y) | 返回矩阵x乘以矩阵y的结果。例如result[i][j] 等于 x[i][j] * y[i][j]。注意：如果想进行线性代数里的乘法，请使用符号“*”。|
+
+
+### 向量关系函数
+|语法 | 说明|
+|-|-|
+|bvec lessThan(vec x, vec y) bvec lessThan(ivec x, ivec y) | 判断x< y|
+|bvec lessThanEqual(vec x, vec y) bvec lessThanEqual(ivec x, ivec y) | 判断x< =y|
+|bvec greaterThan(vec x, vec y) bvec greaterThan(ivec x, ivec y) | 判断x >y|
+|bvec greaterThanEqual(vec x, vec y) bvec greaterThanEqual(ivec x, ivec y) | 判断x >=y|
+|bvec equal(vec x, vec y) bvec equal(ivec x, ivec y) bvec equal(bvec x, bvec y) | 判断x==y|
+|bvec notEqual(vec x, vec y) bvec notEqual(ivec x, ivec y) bvec notEqual(bvec x, bvec y) | 判断x!=y|
+|bool any(bvec x) | 判断x的元素是否有true|
+|bool all(bvec x) | 判断x的元素是否全部为true|
+|bool not(bvec x) | < !--TOTO-- >|
+
+
+### 常用函数
+|语法 | 说明|
+|-|-|
+|genType abs (genType x) | x的绝对值|
+|genType sign (genType x) | 判断x是正数、负数，还是零|
+|genType floor (genType x) | 返回不大于x的最大整数|
+|genType ceil (genType x) | 返回不小于x的最小整数|
+|genType fract (genType x) | 返回x的小数部分，即x-floor(x)|
+|genType mod (genType x, genType y) | 返回x – y * floor (x/y)|
+|genType min (genType x, genType y) | 返回x和y的较小值|
+|genType max (genType x, genType y) | 返回x和y的较大值|
+|genType clamp (genType x, genType minVal, genType maxVal) | min (max (x, minVal), maxVal)，如果minVal  > maxVal，则返回undefined|
+|genType mix (genType x, genType y, genType a) | 返回x * (1−a) + y * a|
