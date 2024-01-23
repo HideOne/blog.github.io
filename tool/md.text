@@ -1,12 +1,4 @@
-|语法 | 说明|
+|属性： | 功能：|
 |-|-|
-|genType abs (genType x) | x的绝对值|
-|genType sign (genType x) | 判断x是正数、负数，还是零|
-|genType floor (genType x) | 返回不大于x的最大整数|
-|genType ceil (genType x) | 返回不小于x的最小整数|
-|genType fract (genType x) | 返回x的小数部分，即x-floor(x)|
-|genType mod (genType x, genType y) | 返回x – y * floor (x/y)|
-|genType min (genType x, genType y) | 返回x和y的较小值|
-|genType max (genType x, genType y) | 返回x和y的较大值|
-|genType clamp (genType x, genType minVal, genType maxVal) | min (max (x, minVal), maxVal)，如果minVal  > maxVal，则返回undefined|
-|genType mix (genType x, genType y, genType a) | 返回x * (1−a) + y * a|
+|Dynamic Pixels Per Unit | 用于 UI 中动态创建的位图（如文本）的每单位像素量。|
+|Reference Pixels Per Unit | 如果精灵具有此“Pixels Per Unit”设置，则精灵中的每个像素将覆盖世界中的一个单位。如果“Reference Pixels Per Unit”设置为 1，则精灵中的“Pixels Per Unit”设置将按原样使用。|
