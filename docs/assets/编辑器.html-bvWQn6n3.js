@@ -1,5 +1,0 @@
-<<<<<<<< HEAD:docs/assets/编辑器.html-i6dFJthw.js
-import{_ as t}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c as s,b as e,d as r}from"./app-TSzCavvZ.js";const a={},c=e("h2",{id:"插件",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#插件","aria-hidden":"true"},"#"),r(" 插件")],-1),_=e("p",null,"插件编辑发送的事件如资源刷新 asset-db/refresh 事件 可通过加http://localhost:7456/ 使用url来请求",-1),n=[c,_];function d(l,h){return o(),s("div",null,n)}const m=t(a,[["render",d],["__file","编辑器.html.vue"]]);export{m as default};
-========
-import{_ as t}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c as s,b as e,d as r}from"./app-pEc7176B.js";const a={},c=e("h2",{id:"插件",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#插件","aria-hidden":"true"},"#"),r(" 插件")],-1),_=e("p",null,"插件编辑发送的事件如资源刷新 asset-db/refresh 事件 可通过加http://localhost:7456/ 使用url来请求",-1),n=[c,_];function d(l,h){return o(),s("div",null,n)}const m=t(a,[["render",d],["__file","编辑器.html.vue"]]);export{m as default};
->>>>>>>> a8de64f7a28eb2cfb5fad9529f60266f57025678:docs/assets/编辑器.html-bvWQn6n3.js
