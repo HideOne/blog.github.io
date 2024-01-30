@@ -28,7 +28,7 @@ headerDepth: 2
 
 
 ### Scale With Screen Size 的设置
-![Alt text](image-1.png)
+![Alt text](./res/image-1.png)
 | 属性：                    | 功能：                                                                              |
 | ------------------------- | ----------------------------------------------------------------------------------- |
 | Reference Resolution      | UI 布局设计的目标分辨率。如果屏幕分辨率较大，则 UI 会放大，如果较小，则 UI 会缩小。 |
