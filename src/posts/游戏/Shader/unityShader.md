@@ -204,3 +204,15 @@ SubShader下必须有pass
 
 #### Tags
 ![alt text](res/image-24.png)
+
+
+## _NameTex_ST(使用 telling offset)
+
+![alt text](res/image-25.png)
+
+```Shader
+// Transforms 2D UV by scale/bias property
+#define TRANSFORM_TEX(tex,name) (tex.xy * name##_ST.xy + name##_ST.zw)
+
+```
+
