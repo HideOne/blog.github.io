@@ -101,3 +101,20 @@ CCProgram shader-name %{
 |-|-|-|
 |cc_matLightPlaneProj | mat4 | 平面阴影的变换矩阵|
 |cc_shadowColor | vec4 | 阴影颜色|
+
+## 注意事项
+- 在 Cocos Creator 中规定 shader 的所有非 sampler 的 uniform 都应该以 block 形式声明
+
+```GLSL
+// 普通 uniform 声明
+uniform float dissolveThreshold;
+
+// UBO 形式声明
+uniform Dissolve{
+    float dissolveThreshold;
+};
+```
+
+
+## shader 资源
+[2d消融shader](./shaderEffect/dissolve2d.effect)
