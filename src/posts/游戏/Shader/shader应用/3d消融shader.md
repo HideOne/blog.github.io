@@ -7,7 +7,7 @@ date: 2024-05-17 12:04:50
 
 ### smoothstep
 - smoothstep可以用来生成0到1的平滑过渡值，它也叫平滑阶梯函数
-![alt text](res/image-5.png){:height="600px" width="600px"}
+![alt text](res/image-5.png)
 
 ```glsl
 float smoothstep(float t1, float t2, float x) {
