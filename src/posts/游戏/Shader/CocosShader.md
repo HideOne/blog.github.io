@@ -118,3 +118,4 @@ uniform Dissolve{
 
 ## shader 资源
 [2d消融shader](./shaderEffect/dissolve2d.effect)
+[3d消融shader](./shaderEffect/dissolve3d.effect)
