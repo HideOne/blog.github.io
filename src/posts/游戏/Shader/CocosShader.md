@@ -115,8 +115,19 @@ uniform Dissolve{
 };
 ```
 
+## 坐标变换
+![alt text](res/image-26.png)
+
+
+## 法线变换
+* 注意：法线变换需要用逆矩阵  因为模型有缩放的话 用视图矩阵转化 会导致法线不再垂直
+![alt text](res/image-27.png)
+
+
+
 
 ## shader 资源
 [2d消融shader](./shaderEffect/dissolve2d.effect)
 [3d消融shader](./shaderEffect/dissolve3d.effect)
 [边缘检测](./shaderEffect/edgeCheck.effect)
+[边缘发光](./shaderEffect/edgeLight.effect)
